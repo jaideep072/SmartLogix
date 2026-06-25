@@ -8,7 +8,7 @@ public class TestConnection {
     public static void main(String[] args) {
         String url = "jdbc:postgresql://localhost:5432/smartlogix";
         String user = "postgres";
-        String password = "postgres";
+        String password = "cybersec123";
 
         System.out.println("Attempting to connect to PostgreSQL database...");
 

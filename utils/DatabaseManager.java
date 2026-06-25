@@ -16,7 +16,7 @@ public class DatabaseManager {
 
     private static final String URL = "jdbc:postgresql://localhost:5432/smartlogix";
     private static final String USER = "postgres";
-    private static final String PASSWORD = "postgres";
+    private static final String PASSWORD = "cybersec123";
 
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
