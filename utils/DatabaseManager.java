@@ -222,4 +222,23 @@ public class DatabaseManager {
 
         return list;
     }
+<<<<<<< HEAD
+=======
+
+    public static void saveInventory(InventoryRecord record) {
+        String sql = "INSERT INTO inventory (product_id, product_name, quantity) VALUES (?, ?, ?)";
+
+        try (Connection conn = getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setInt(1, record.getProductId());
+            pstmt.setString(2, record.getWarehouseId()); // The model names this warehouseId but it's actually the product name
+            pstmt.setInt(3, record.getQuantity());
+            pstmt.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println("Error saving inventory to database: " + e.getMessage());
+        }
+    }
+>>>>>>> 443813a (Migrate application from CSV to PostgreSQL database)
 }
