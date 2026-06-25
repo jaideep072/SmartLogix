@@ -222,9 +222,6 @@ public class DatabaseManager {
 
         return list;
     }
-<<<<<<< HEAD
-=======
-
     public static void saveInventory(InventoryRecord record) {
         String sql = "INSERT INTO inventory (product_id, product_name, quantity) VALUES (?, ?, ?)";
 
@@ -240,5 +237,4 @@ public class DatabaseManager {
             System.out.println("Error saving inventory to database: " + e.getMessage());
         }
     }
->>>>>>> 443813a (Migrate application from CSV to PostgreSQL database)
 }
