@@ -1,7 +1,7 @@
 package m3;
 
 import models.Route;
-import utils.CSVManager;
+import utils.DatabaseManager;
 import utils.InputHelper;
 
 import java.util.Scanner;
@@ -15,7 +15,7 @@ public class GraphAlgorithms {
                 new LogisticsGraph();
 
         for (Route route :
-                CSVManager.loadRoutes()) {
+                DatabaseManager.loadRoutes()) {
 
             graph.addRoute(route);
         }

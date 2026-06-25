@@ -2,7 +2,7 @@ package m1;
 
 import models.InventoryRecord;
 import models.Shipment;
-import utils.CSVManager;
+import utils.DatabaseManager;
 import utils.InputHelper;
 
 import java.util.Scanner;
@@ -45,7 +45,7 @@ public class TreeStructures {
                 new BSTShipmentTracker();
 
         for (Shipment s :
-                CSVManager.loadShipments()) {
+                DatabaseManager.loadShipments()) {
 
             bst.insert(s);
         }
@@ -112,7 +112,7 @@ public class TreeStructures {
                 new AVLInventoryManager();
 
         for (InventoryRecord r :
-                CSVManager.loadInventory()) {
+                DatabaseManager.loadInventory()) {
 
             avl.insert(r);
         }

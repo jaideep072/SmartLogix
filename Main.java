@@ -1,6 +1,6 @@
 import models.*;
 import models.Order;
-import utils.CSVManager;
+import utils.DatabaseManager;
 import utils.InputHelper;
 
 import java.time.LocalDate;
@@ -113,7 +113,7 @@ public class Main {
         String name = InputHelper.readString(sc, "Warehouse Name: ");
         String city = InputHelper.readString(sc, "City: ");
 
-        CSVManager.saveWarehouse(
+        DatabaseManager.saveWarehouse(
                 new Warehouse(id, name, city)
         );
 
@@ -131,7 +131,7 @@ static void addShipment() {
     double weight = InputHelper.readDouble(sc, "Weight: ");
     String status = InputHelper.readString(sc, "Status: ");
 
-    CSVManager.saveShipment(
+    DatabaseManager.saveShipment(
             new Shipment(
                     id,
                     src,
@@ -153,7 +153,7 @@ static void addShipment() {
         String customer = InputHelper.readString(sc, "Customer Name: ");
         int shipmentId = InputHelper.readInt(sc, "Shipment ID: ");
 
-        CSVManager.saveOrder(
+        DatabaseManager.saveOrder(
                 new Order(id, customer, shipmentId)
         );
 
@@ -167,7 +167,7 @@ static void addShipment() {
         int distance = InputHelper.readInt(sc, "Distance: ");
         int cost = InputHelper.readInt(sc, "Transport Cost: ");
 
-        CSVManager.saveRoute(
+        DatabaseManager.saveRoute(
                 new Route(src, dest, distance, cost)
         );
 
@@ -177,19 +177,19 @@ static void addShipment() {
     static void viewData() {
 
         System.out.println("\nWAREHOUSES");
-        List<Warehouse> warehouses = CSVManager.loadWarehouses();
+        List<Warehouse> warehouses = DatabaseManager.loadWarehouses();
         warehouses.forEach(System.out::println);
 
         System.out.println("\nSHIPMENTS");
-        List<Shipment> shipments = CSVManager.loadShipments();
+        List<Shipment> shipments = DatabaseManager.loadShipments();
         shipments.forEach(System.out::println);
 
         System.out.println("\nORDERS");
-        List<Order> orders = CSVManager.loadOrders();
+        List<Order> orders = DatabaseManager.loadOrders();
         orders.forEach(System.out::println);
 
         System.out.println("\nROUTES");
-        List<Route> routes = CSVManager.loadRoutes();
+        List<Route> routes = DatabaseManager.loadRoutes();
         routes.forEach(System.out::println);
     }
 }

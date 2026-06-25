@@ -3,7 +3,7 @@ import models.Route;
 import models.Shipment;
 import models.Warehouse;
 import models.InventoryRecord;
-import utils.CSVManager;
+import utils.DatabaseManager;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
@@ -31,8 +31,8 @@ public class SmartLogixTest {
         testNullPointerExceptionHandling();
         testEmptyStringParseExceptionHandling();
 
-        // 3. CSVManager Integration Tests
-        testCSVManagerDataLoad();
+        // 3. DatabaseManager Integration Tests
+        testDatabaseManagerDataLoad();
 
         // 4. Intentional Failure Demonstrations
         testIntentionalFailureDataMismatch();
@@ -143,43 +143,43 @@ public class SmartLogixTest {
         }
     }
 
-    // --- 3. CSVManager Integration Tests ---
-    private static void testCSVManagerDataLoad() {
-        String testName = "CSVManager - Load Warehouses without Exception";
+    // --- 3. DatabaseManager Integration Tests ---
+    private static void testDatabaseManagerDataLoad() {
+        String testName = "DatabaseManager - Load Warehouses without Exception";
         try {
-            List<Warehouse> warehouses = CSVManager.loadWarehouses();
+            List<Warehouse> warehouses = DatabaseManager.loadWarehouses();
             assertTrue(warehouses != null, testName);
         } catch (Exception e) {
             fail(testName, "Exception thrown during data load: " + e.getMessage());
         }
 
-        testName = "CSVManager - Load Shipments without Exception";
+        testName = "DatabaseManager - Load Shipments without Exception";
         try {
-            List<Shipment> shipments = CSVManager.loadShipments();
+            List<Shipment> shipments = DatabaseManager.loadShipments();
             assertTrue(shipments != null, testName);
         } catch (Exception e) {
             fail(testName, "Exception thrown during data load: " + e.getMessage());
         }
 
-        testName = "CSVManager - Load Orders without Exception";
+        testName = "DatabaseManager - Load Orders without Exception";
         try {
-            List<Order> orders = CSVManager.loadOrders();
+            List<Order> orders = DatabaseManager.loadOrders();
             assertTrue(orders != null, testName);
         } catch (Exception e) {
             fail(testName, "Exception thrown during data load: " + e.getMessage());
         }
 
-        testName = "CSVManager - Load Routes without Exception";
+        testName = "DatabaseManager - Load Routes without Exception";
         try {
-            List<Route> routes = CSVManager.loadRoutes();
+            List<Route> routes = DatabaseManager.loadRoutes();
             assertTrue(routes != null, testName);
         } catch (Exception e) {
             fail(testName, "Exception thrown during data load: " + e.getMessage());
         }
 
-        testName = "CSVManager - Load Inventory without Exception";
+        testName = "DatabaseManager - Load Inventory without Exception";
         try {
-            List<InventoryRecord> inv = CSVManager.loadInventory();
+            List<InventoryRecord> inv = DatabaseManager.loadInventory();
             assertTrue(inv != null, testName);
         } catch (Exception e) {
             fail(testName, "Exception thrown during data load: " + e.getMessage());

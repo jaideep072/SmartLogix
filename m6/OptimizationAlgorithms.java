@@ -1,7 +1,7 @@
 package m6;
 
 import models.Shipment;
-import utils.CSVManager;
+import utils.DatabaseManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -94,7 +94,7 @@ public class OptimizationAlgorithms {
                 new ArrayList<>();
 
         List<Shipment> shipments =
-                CSVManager.loadShipments();
+                DatabaseManager.loadShipments();
 
         for (Shipment s : shipments) {
 
@@ -131,7 +131,7 @@ public class OptimizationAlgorithms {
                 new ArrayList<>();
 
         List<Shipment> shipments =
-                CSVManager.loadShipments();
+                DatabaseManager.loadShipments();
 
         for (Shipment s : shipments) {
 

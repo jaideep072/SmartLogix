@@ -2,7 +2,7 @@ package m2;
 
 import models.Order;
 import models.Shipment;
-import utils.CSVManager;
+import utils.DatabaseManager;
 import utils.InputHelper;
 
 import java.util.Scanner;
@@ -66,7 +66,7 @@ public class MultiwayStructures {
                 new BTreeOrderArchive();
 
         for (Order order :
-                CSVManager.loadOrders()) {
+                DatabaseManager.loadOrders()) {
 
             tree.insert(order);
         }
@@ -92,7 +92,7 @@ public class MultiwayStructures {
                 new BPlusDeliveryIndex();
 
         for (Shipment s :
-                CSVManager.loadShipments()) {
+                DatabaseManager.loadShipments()) {
 
             tree.insert(s);
         }

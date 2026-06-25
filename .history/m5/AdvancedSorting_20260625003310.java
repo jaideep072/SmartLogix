@@ -1,7 +1,7 @@
 package m5;
 
 import models.Shipment;
-import utils.CSVManager;
+import utils.DatabaseManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +40,7 @@ public class AdvancedSorting {
 
             List<Shipment> shipments =
                     new ArrayList<>(
-                            CSVManager.loadShipments());
+                            DatabaseManager.loadShipments());
 
             switch (choice) {
 

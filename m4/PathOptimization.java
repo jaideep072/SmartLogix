@@ -1,7 +1,7 @@
 package m4;
 
 import models.Route;
-import utils.CSVManager;
+import utils.DatabaseManager;
 import utils.InputHelper;
 
 import java.util.Scanner;
@@ -15,7 +15,7 @@ public class PathOptimization {
                 new ShortestPathAlgorithms();
 
         for (Route route :
-                CSVManager.loadRoutes()) {
+                DatabaseManager.loadRoutes()) {
 
             alg.addRoute(route);
         }

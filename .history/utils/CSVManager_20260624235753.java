@@ -8,7 +8,7 @@ import java.util.List;
 
 import java.time.LocalDate;
 
-public class CSVManager {
+public class DatabaseManager {
 
     private static final String WAREHOUSE_FILE = "data/warehouses.csv";
     private static final String SHIPMENT_FILE = "data/shipments.csv";

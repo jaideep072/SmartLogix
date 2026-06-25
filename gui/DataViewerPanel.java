@@ -4,7 +4,7 @@ import models.Order;
 import models.Route;
 import models.Shipment;
 import models.Warehouse;
-import utils.CSVManager;
+import utils.DatabaseManager;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -41,7 +41,7 @@ public class DataViewerPanel extends JPanel {
 
     private JScrollPane createWarehousePanel() {
         String[] columns = {"Warehouse ID", "Name", "City"};
-        List<Warehouse> warehouses = CSVManager.loadWarehouses();
+        List<Warehouse> warehouses = DatabaseManager.loadWarehouses();
         DefaultTableModel model = new DefaultTableModel(columns, 0);
 
         for (Warehouse w : warehouses) {
@@ -54,7 +54,7 @@ public class DataViewerPanel extends JPanel {
 
     private JScrollPane createShipmentPanel() {
         String[] columns = {"ID", "Source", "Destination", "Date", "Priority", "Cost", "Weight", "Status"};
-        List<Shipment> shipments = CSVManager.loadShipments();
+        List<Shipment> shipments = DatabaseManager.loadShipments();
         DefaultTableModel model = new DefaultTableModel(columns, 0);
 
         for (Shipment s : shipments) {
@@ -70,7 +70,7 @@ public class DataViewerPanel extends JPanel {
 
     private JScrollPane createOrderPanel() {
         String[] columns = {"Order ID", "Customer Name", "Shipment ID"};
-        List<Order> orders = CSVManager.loadOrders();
+        List<Order> orders = DatabaseManager.loadOrders();
         DefaultTableModel model = new DefaultTableModel(columns, 0);
 
         for (Order o : orders) {
@@ -83,7 +83,7 @@ public class DataViewerPanel extends JPanel {
 
     private JScrollPane createRoutePanel() {
         String[] columns = {"Source", "Destination", "Distance", "Transport Cost"};
-        List<Route> routes = CSVManager.loadRoutes();
+        List<Route> routes = DatabaseManager.loadRoutes();
         DefaultTableModel model = new DefaultTableModel(columns, 0);
 
         for (Route r : routes) {

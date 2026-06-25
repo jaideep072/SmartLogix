@@ -4,7 +4,7 @@ import models.Order;
 import models.Route;
 import models.Shipment;
 import models.Warehouse;
-import utils.CSVManager;
+import utils.DatabaseManager;
 
 import javax.swing.*;
 import java.time.LocalDate;
@@ -30,7 +30,7 @@ public class AddDialogs {
         if (result == JOptionPane.OK_OPTION) {
             try {
                 Warehouse w = new Warehouse(idField.getText().trim(), nameField.getText().trim(), cityField.getText().trim());
-                CSVManager.saveWarehouse(w);
+                DatabaseManager.saveWarehouse(w);
                 JOptionPane.showMessageDialog(parent, "Warehouse added successfully!");
                 if (viewerPanel != null) viewerPanel.refreshData();
             } catch (Exception e) {
@@ -76,7 +76,7 @@ public class AddDialogs {
                         Double.parseDouble(weightField.getText().trim()),
                         statusField.getText().trim()
                 );
-                CSVManager.saveShipment(s);
+                DatabaseManager.saveShipment(s);
                 JOptionPane.showMessageDialog(parent, "Shipment added successfully!");
                 if (viewerPanel != null) viewerPanel.refreshData();
             } catch (Exception e) {
@@ -105,7 +105,7 @@ public class AddDialogs {
                         customerField.getText().trim(),
                         Integer.parseInt(shipmentIdField.getText().trim())
                 );
-                CSVManager.saveOrder(o);
+                DatabaseManager.saveOrder(o);
                 JOptionPane.showMessageDialog(parent, "Order added successfully!");
                 if (viewerPanel != null) viewerPanel.refreshData();
             } catch (Exception e) {
@@ -137,7 +137,7 @@ public class AddDialogs {
                         Integer.parseInt(distField.getText().trim()),
                         Integer.parseInt(costField.getText().trim())
                 );
-                CSVManager.saveRoute(r);
+                DatabaseManager.saveRoute(r);
                 JOptionPane.showMessageDialog(parent, "Route added successfully!");
                 if (viewerPanel != null) viewerPanel.refreshData();
             } catch (Exception e) {
