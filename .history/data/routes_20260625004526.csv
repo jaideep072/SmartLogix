@@ -1,0 +1,5 @@
+Central Warehouse,North Warehouse,280,1000
+North Warehouse,South Warehouse,430,1500
+South Warehouse,East Warehouse,500,1200
+East Warehouse,Central Warehouse,620,1800
+Central Warehouse,South Warehouse,700,2200

@@ -1,0 +1,5 @@
+1001,Hyderabad Logistics Hub,Vijayawada Distribution Center,2026-07-01,3,1500,250,In Transit
+1002,Vijayawada Distribution Center,Chennai Regional Hub,2026-07-05,1,2200,300,Delivered
+1003,Chennai Regional Hub,Vizag Cargo Terminal,2026-07-10,2,1800,150,Pending
+1004,Vizag Cargo Terminal,Hyderabad Logistics Hub,2026-07-15,4,2700,450,In Transit
+1005,Hyderabad Logistics Hub,Chennai Regional Hub,2026-07-20,5,3500,500,Pending

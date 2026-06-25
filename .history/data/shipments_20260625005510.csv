@@ -1,0 +1,5 @@
+1001,Central Warehouse,North Warehouse,2026-07-01,3,1500,250,In Transit
+1002,North Warehouse,South Warehouse,2026-07-05,1,2200,300,Delivered
+1003,South Warehouse,East Warehouse,2026-07-10,2,1800,150,Pending
+1004,East Warehouse,Central Warehouse,2026-07-15,4,2700,450,In Transit
+1005,Central Warehouse,South Warehouse,2026-07-20,5,3500,500,Pending
