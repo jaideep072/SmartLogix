@@ -1,6 +1,10 @@
 # 📦 SmartLogix
 
+## 📖 About
+
 **SmartLogix** is a comprehensive, Java-based logistics and supply chain management application. It serves as both a practical business tool and an advanced demonstration of data structures and algorithms applied to real-world routing, inventory, and shipment problems.
+
+Whether you're looking to manage a network of warehouses and shipments or explore the implementation of Minimum Spanning Trees, Dijkstra's algorithm, and B-Trees in a real-world scenario, SmartLogix provides a complete ecosystem.
 
 ---
 
